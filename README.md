@@ -1,2 +1,1 @@
-# five-research.github.io
-temporary website untill gathering of funds occurs
+Checkout the awesome new website here: [Five Labs](https://fivelabs.co)
