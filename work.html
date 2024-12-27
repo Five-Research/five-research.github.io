@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Five Labs - Projects</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+		<style>
+			/* Reset and base styles */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: "Inter", sans-serif;
+				background-color: black;
+				color: white;
+				line-height: 1.8;
+			}
+			nav {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 1000;
+				padding: 20px 0;
+				background: rgba(0, 0, 0, 0.8);
+			}
+			nav a {
+				color: white;
+				text-decoration: none;
+				font-size: 14px;
+				letter-spacing: 2px;
+				margin-left: 30px;
+				position: relative;
+				transition: color 0.3s ease;
+			}
+			nav a::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				bottom: -5px;
+				left: 0;
+				background-color: white;
+				transform: scaleX(0);
+				transition: transform 0.3s ease;
+			}
+			nav a:hover {
+				color: #cccccc;
+			}
+			nav a:hover::after {
+				transform: scaleX(1);
+			}
+			.logo img {
+				height: 50px; /* Adjust the height as per your design */
+				width: auto; /* Maintains aspect ratio */
+				display: block;
+			}
+			.container {
+				width: 90%;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			nav a {
+				color: white;
+				text-decoration: none;
+				font-size: 14px;
+				letter-spacing: 2px;
+				margin-left: 30px;
+			}
+			h1 {
+				font-family: "Playfair Display", serif;
+				font-size: 3rem;
+				margin-bottom: 20px;
+			}
+			h2 {
+				font-family: "Playfair Display", serif;
+				font-size: 2.5rem;
+				margin-bottom: 30px;
+			}
+			/* Project cards */
+			.projects-section {
+				padding: 80px 0;
+			}
+			.project-card {
+				display: flex;
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				margin-bottom: 30px;
+				overflow: hidden;
+			}
+			.project-card img {
+				width: 30%;
+				height: auto;
+				object-fit: cover;
+			}
+			.project-card-content {
+				padding: 20px;
+				width: 70%;
+			}
+			.project-card h3 {
+				font-family: "Playfair Display", serif;
+				font-size: 1.8rem;
+				margin-bottom: 10px;
+			}
+			.project-card p {
+				color: rgba(255, 255, 255, 0.7);
+				font-size: 14px;
+				margin-bottom: 20px;
+			}
+			.btn {
+				display: inline-block;
+				padding: 12px 24px;
+				background: transparent;
+				border: 1px solid white;
+				color: white;
+				text-decoration: none;
+				font-size: 14px;
+				letter-spacing: 2px;
+				transition: all 0.3s ease;
+			}
+			.btn:hover {
+				background: white;
+				color: black;
+			}
+			/* Responsive styles */
+			@media (max-width: 768px) {
+				.project-card {
+					flex-direction: column;
+				}
+				.project-card img {
+					width: 100%;
+					height: auto;
+				}
+				.project-card-content {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div class="container">
+				<a href="./index.html" class="logo">
+					<img src="./images/black.png" alt="Five Labs Logo" />
+				</a>
+				<div class="links">
+					<a href="./work.html">Work</a>
+					<a href="./manifesto.html">Manifesto</a>
+					<a href="./contact.html">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="projects-section">
+			<div class="container">
+				<br/>
+				<h2>Our ongoing work</h2>
+				<p>We're just getting started, keep an eye out for cool things incoming!</p>
+				<br/>
+
+				<div class="project-card">
+					<img src="./images/vishnu.jpg"/>
+					<div class="project-card-content">
+						<h3>Vishnu</h3>
+						<p>
+							A state of the art reasoning model. 
+							containing advanced long-term context retention and multi-turn conversation capability, 
+							complex roleplaying and internal monologue abilities, and enhanced agentic function-calling. 
+						</p>
+						<!-- <a href="#" class="btn">Learn More →</a> -->
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img src="./images/music.jpg"/>
+					<div class="project-card-content">
+						<h3>Music Language Models</h3>
+						<p>
+							Utilizing probabilistic models of audio waveforms to generate dynamic music compositions from a given sample. This approach employs advanced algorithms to analyze and synthesize sound, enabling the creation of unique, complex musical sequences based on the underlying statistical properties of the sample
+						</p>
+						<!-- <a href="#" class="btn">Learn More →</a> -->
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img src="./images/shop.jpg"/>
+					<div class="project-card-content">
+						<h3>Marketplace</h3>
+						<p>
+							Taking on existing boring SaaS companies by making cool AI products while strategically funding research initiatives with the funds.
+						</p>
+						<!-- <a href="#" class="btn">Learn More →</a> -->
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img src="./images/cleaners.jpg"/>
+					<div class="project-card-content">
+						<h3>AI for social good</h3>
+						<p>
+							A simple YOLO based image classifier for identifying trash in public places 
+							which is then integrated with a robot system which picks them up in a systematic way.
+						</p>
+						<!-- <a href="#" class="btn">Learn More →</a> -->
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</body>
+</html>
