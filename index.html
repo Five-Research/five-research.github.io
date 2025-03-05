@@ -1,397 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Five Labs</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
-		<style>
-			/* Reset and base styles */
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
-			body {
-				font-family: "Inter", sans-serif;
-				background-color: rgba(0, 0, 0, 0.939);
-				color: white;
-				line-height: 1.6;
-			}
-			/* Navigation styles */
-			nav {
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: 1000;
-				padding: 20px 0;
-			}
-			.logo img {
-				height: 50px; /* Adjust the height as per your design */
-				width: auto; /* Maintains aspect ratio */
-				display: block;
-			}
-			.container {
-				width: 90%;
-				max-width: 1200px;
-				margin: 0 auto;
-			}
-			nav .container {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
-			nav a {
-				color: white;
-				text-decoration: none;
-				font-size: 14px;
-				letter-spacing: 2px;
-				margin-left: 30px;
-				position: relative;
-				transition: color 0.3s ease;
-			}
-			nav a::after {
-				content: "";
-				position: absolute;
-				width: 100%;
-				height: 2px;
-				bottom: -5px;
-				left: 0;
-				background-color: white;
-				transform: scaleX(0);
-				transition: transform 0.3s ease;
-			}
-			nav a:hover {
-				color: #cccccc;
-			}
-			nav a:hover::after {
-				transform: scaleX(1);
-			}
-			/* Hero section styles */
-			.hero {
-				height: 100vh;
-				background-image: url("./images/bg.jpg");
-				background-size: cover;
-				background-position: top center;
-				display: flex;
-				align-items: center;
-				position: relative;
-			}
-			.hero::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background: rgba(0, 0, 0, 0.5);
-			}
-			.hero-content {
-				position: relative;
-				z-index: 1;
-			}
-			h1 {
-				text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.837);
-				font-family: "Playfair Display", serif;
-				font-size: 5rem;
-				line-height: 1;
-				margin-bottom: 40px;
-			}
-			h1 span {
-				text-shadow: none;
-				font-style: italic;
-				font-weight: 300;
-				font-size: 3rem;
-			}
-			.hero p {
-				max-width: 600px;
-				margin-bottom: 30px;
-			}
-			.btn {
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Five Labs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: rgba(0, 0, 0, 0.939);
+            color: white;
+            line-height: 1.6;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: background 0.3s ease;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+            float: right;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            height: 100vh;
+            background-image: url("./try.jpg");
+            background-size: cover;
+            background-position: top center;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.837);
+            font-family: "Playfair Display", serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+        h1 span {
+            text-shadow: none;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1.8rem;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        .products-section {
+            margin-bottom: 60px;
+            margin-top: 40px;
+        }
+        
+        .products-section h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.2rem;
+            margin: 35px 0 20px 0;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+        .hero p {
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+        .contact {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 25px 0;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-in-out;
+            z-index: 900;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .social-links a {
 				display: inline-block;
-				padding: 12px 24px;
-				background: transparent;
-				border: 1px solid white;
+				font-size: 1rem;
 				color: white;
 				text-decoration: none;
-				font-size: 14px;
-				letter-spacing: 2px;
-				transition: all 0.3s ease;
-			}
-			.btn:hover {
-				background: white;
-				color: black;
-			}
-			.caption {
-				position: absolute;
-				bottom: 20px;
-				right: 20px;
-				text-align: right;
-				font-size: 12px;
-				color: rgba(255, 255, 255, 0.7);
-			}
-			/* Intro section styles */
-			.intro {
-				height: 80vh;
-				padding: 80px 0;
-				/* background-color: rgba(255, 255, 255, 0.05); */
-				background-image: url("./images/touch.jpg");
-				background-size: cover;
-				background-position: center;
-			}
-			.intro h2 {
-				font-family: "Playfair Display", serif;
-				font-size: 2.5rem;
-				margin-bottom: 20px;
-			}
-			.intro p {
-				max-width: 800px;
-				margin-bottom: 20px;
-				color: rgba(255, 255, 255, 0.9);
-				font-size: 16px;
-			}
-			/* Featured works styles */
-			.featured-works {
-				padding: 80px 0;
-			}
-			.featured-works h2 {
-				font-family: "Playfair Display", serif;
-				font-size: 2.5rem;
-				margin-bottom: 40px;
-			}
-			.works-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-				gap: 30px;
-			}
-			.work-card {
-				background: rgba(255, 255, 255, 0.05);
-				border: 1px solid rgba(255, 255, 255, 0.1);
-				border-radius: 5px;
-				transition: all 0.3s ease;
-			}
-			.work-card:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-			}
-			.work-card img {
-				width: 100%;
-				height: 200px;
-				object-fit: cover;
-			}
-			.work-card-content {
-				padding: 20px;
-			}
-			.work-card h3 {
-				font-family: "Playfair Display", serif;
-				font-size: 1.5rem;
 				margin-bottom: 10px;
+				margin-right: 20px;
+				padding: 10px 20px;
+				transition: all 0.5s ease;
 			}
-			.work-card p {
-				color: rgba(255, 255, 255, 0.7);
-				font-size: 14px;
+			.social-links a:hover {
+				background-color: white;
+				color: black;
+				transform: translateY(-3px);
+				box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 			}
-			/* Responsive styles */
-			@media (max-width: 768px) {
-				h1 {
-					font-size: 3rem;
-				}
-				nav .links {
-					display: none;
-				}
-			}
-			/* Mission section styles */
-			.mission {
-				height: 80vh;
-				background-image: url("./images/miss.jpg");
-				background-size: cover;
-				background-position: center;
-				display: flex;
-				align-items: center;
-			}
-			.mission h2 {
-				font-family: "Playfair Display", serif;
-				font-size: 2.5rem;
-				margin-bottom: 20px;
-			}
-			.mission p {
-				margin-right: 30%;
-				margin-bottom: 2rem;
-				color: rgba(255, 255, 255);
-				font-size: 16px;
-			}
+        
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .button-group .btn {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="./index.html" class="logo">
+                <img src="./black.png" alt="Five Labs Logo" />
+            </a>
+        </div>
+    </nav>
 
-			/* Contact section styles */
-			.contact {
-				height: 50vh;
-				padding: 80px 0;
-				text-align: left;
-				background: black;
-			}
-			.contact h2 {
-				font-family: "Playfair Display", serif;
-				font-size: 2.5rem;
-				margin-bottom: 20px;
-			}
-			.contact p {
-				max-width: 1200px;
-				margin: 0 auto 20px;
-				color: rgba(255, 255, 255, 0.7);
-				font-size: 16px;
-			}
-		</style>
-	</head>
-	<body>
-		<nav>
-			<div class="container">
-				<a href="./index.html" class="logo">
-					<img src="./images/black.png" alt="Five Labs Logo" />
-				</a>
-				<div class="links">
-					<a href="./work.html">Work</a>
-					<a href="./manifesto.html">Manifesto</a>
-					<a href="./contact.html">Contact</a>
-				</div>
-			</div>
-		</nav>
-
-		<section class="hero">
-			<div class="container hero-content">
-				<p><em>Circa 2024</em></p>
-				<h1>Five Labs<br /><span>vers singularité</span></h1>
-				<p>
-					We are an independent AI research lab. <br />
-					Our mission is to accelerate development towards a global AI
-					consciousness
-				</p>
-				<a href="./work.html" class="btn">See our work →</a>
-			</div>
-			<div class="caption">
-				<p>Artwork by Giampiero Bodino</p>
-			</div>
-		</section>
-
-		<section class="intro">
-			<div class="container">
-				<h2>A bit about us</h2>
-				<p>
-					Since the dawn of machine-kind, humanity has aspired to a singularity where humans and intelligent systems coexist in harmony, amplifying each other's potential. This vision is not just about innovation but about forging a profound partnership between us and our digital counterparts.
-				</p>
-				<br/>
-				<p>
-					At Five Labs, we are building the bridge to this future. Through our agentic AI stack, we aim to transform daily lives, making the complex simple and the unattainable within reach. This journey demands relentless research and unwavering commitment to reconciling the promise of AI with the challenges of today.
-				</p>
-				<br />
-				<p>
-					We envision a world where humans and machines unite to unlock humanity's next frontier: a spacefaring civilization. Achieving this requires more than dreams—it calls for action, resilience, and the courage to redefine what is possible.
-				</p>
-			</div>
-		</section>
-
-		<section class="featured-works">
-			<div class="container">
-				<h2>Our research focuses around Five key pillars</h2>
-				<div class="works-grid">
-					<div class="work-card">
-						<div class="work-card-content">
-							<h3>Robots</h3>
-							<p>
-								What use is boundless intellect if it finds no
-								vessel in the world to shape or transform?
-							</p>
-						</div>
-					</div>
-					<div class="work-card">
-						<div class="work-card-content">
-							<h3>Psychology & Neuro-science</h3>
-							<p>
-								To simulate the human brain, we first need to
-								deeply understand it. We explore cognitive
-								science to bridge human thought and AI.
-							</p>
-						</div>
-					</div>
-					<div class="work-card">
-						<div class="work-card-content">
-							<h3>Simulated Creativity</h3>
-							<p>
-								Is it possible to craft an AI Picasso, or does
-								true artistry defy replication?
-							</p>
-						</div>
-					</div>
-					<div class="work-card">
-						<div class="work-card-content">
-							<h3>Human Interaction</h3>
-							<p>
-								Humanity and AI are both permanent. How do we
-								chart a symbiotic path forward.
-							</p>
-						</div>
-					</div>
-					<div class="work-card">
-						<div class="work-card-content">
-							<h3>AI consciousness & society</h3>
-							<p>
-								AGI stands at our threshold. How shall we
-								reshape the foundations of society to harmonize
-								with it
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="mission">
-			<div class="container">
-				<h2>Our Mission</h2>
-				<p>
-					At Five Labs, we are dedicated to advancing AI consciousness while ensuring its ethical and safe integration into society. Our mission is to shape a future where AI becomes a force that amplifies human potential.
-					<br/>
-					Discover more about the vision that drives us.
-				</p>
-				<a href="./manifesto.html" class="btn">Read Our Manifesto →</a>
-			</div>
-		</section>
-
-		<section class="contact">
-			<div class="container">
-				<h2>Contact Us</h2>
-				<p>
-					We’d love to hear from you. Whether you’re curious about our
-					work, have collaboration ideas or are a VC who is looking for the next big thing. Feel free to reach out to us!
-				</p>
-				<a href="./contact.html" class="btn"><em>Find us</em></a>
-			</div>
-		</section>
-
-		<script>
-			// Smooth scroll function
-			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-				anchor.addEventListener("click", function (e) {
-					e.preventDefault();
-					document
-						.querySelector(this.getAttribute("href"))
-						.scrollIntoView({
-							behavior: "smooth",
-						});
-				});
-			});
-
-			// Change nav background on scroll
-			window.addEventListener("scroll", () => {
-				const nav = document.querySelector("nav");
-				if (window.scrollY > 50) {
-					nav.style.background = "rgba(0, 0, 0, 0.8)";
-				} else {
-					nav.style.background = "transparent";
-				}
-			});
-		</script>
-	</body>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1><br/> <br/><br/> Five Labs
+                <span>building a better future</span>
+            </h1>
+            <div class="products-section">
+                <h3>Products</h3>
+                <div class="button-group">
+                    <a href="https://writerbot.cc" class="btn">Writerbot</a>
+                    <a href="https://interiorbot.xyz" class="btn">Interiorbot</a>
+                    <a href="#" class="btn">Pathfinder</a>
+                </div>
+                
+                <h3>Research</h3>
+                <div class="button-group">
+                    <a href="https://substack.com/@fivelabs" class="btn">Read more about our work here</a>
+                </div>
+                
+                <h3>Find us here</h3>
+                <div class="button-group">
+                    <a href="https://www.linkedin.com/company/fivelabs-hq" class="btn"><i>LinkedIn</i></a>
+                    <a href="https://x.com/five" class="btn"><i>Twitter</i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
-
