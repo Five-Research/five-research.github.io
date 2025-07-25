@@ -10,7 +10,7 @@
       "logo": {
         "@type": "ImageObject",
         "@id": "https://fivelabs.co/#logo",
-        "url": "https://fivelabs.co/images/black.png",
+        "url": "https://fivelabs.co/images/black.webp",
         "width": 200,
         "height": 60,
         "caption": "Five Labs Logo"

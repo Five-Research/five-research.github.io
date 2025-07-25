@@ -189,7 +189,7 @@ p {
 .hero {
 	height: 100vh;
 	min-height: 600px;
-	background-image: url("../images/wow.png");
+	background-image: url("../images/wow.webp");
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -311,7 +311,7 @@ p {
 .intro {
     min-height: 60vh;
     padding: 100px 0;
-    background-image: url("../images/whoweare.png");
+    background-image: url("../images/whoweare.webp");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -401,7 +401,7 @@ p {
 
 .left {
 	flex: 1;
-	background-image: url("../images/contact.jpg");
+	background-image: url("../images/contact.webp");
 	background-size: cover;
 	background-position: center;
 }
