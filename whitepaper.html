@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Indra OS Whitepaper - Five Labs | Swarm-Based AI Operating System Research</title>
+		<meta name="description" content="Indra OS: the whitepaper by Five Labs." />
+		<meta name="keywords" content="Indra OS, AI whitepaper, AI operating system, swarm intelligence, multi-agent systems, AI research paper, artificial intelligence whitepaper, Five Labs research" />
+		<meta name="author" content="Five Labs" />
+		
+		<!-- Critical SEO Meta Tags for 2025 -->
+		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta name="theme-color" content="#000000" />
+		<meta name="msapplication-TileColor" content="#000000" />
+		<meta name="application-name" content="Five Labs" />
+		<meta name="apple-mobile-web-app-title" content="Five Labs" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://fivelabs.co/whitepaper.html" />
+		<meta property="og:title" content="Indra OS: the whitepaper by Five Labs." />
+		<meta property="og:description" content="Comprehensive research on swarm-based operating systems for AI agents. Discover how IndraOS coordinates multiple AI agents for complex tasks." />
+		<meta property="og:image" content="https://fivelabs.co/images/open-banner.png" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://fivelabs.co/whitepaper.html" />
+		<meta property="twitter:title" content="Indra OS Whitepaper" />
+		<meta property="twitter:description" content="Cutting edge research by Five Labs." />
+		<meta property="twitter:image" content="https://fivelabs.co/images/open-banner.png" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://fivelabs.co/whitepaper.html" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/mobile.css" />
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ScholarlyArticle",
+			"name": "IndraOS Whitepaper",
+			"headline": "IndraOS: A Swarm-Based Operating System for AI Agents",
+			"description": "Comprehensive research on swarm-based operating systems for AI agents. Discover how IndraOS coordinates multiple AI agents for complex tasks.",
+			"url": "https://fivelabs.co/whitepaper.html",
+			"author": {
+				"@type": "Organization",
+				"name": "Five Labs",
+				"url": "https://fivelabs.co"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Five Labs",
+				"url": "https://fivelabs.co"
+			},
+			"about": [
+				"Artificial Intelligence",
+				"Operating Systems",
+				"Swarm Intelligence",
+				"Multi-agent Systems"
+			],
+			"keywords": "IndraOS, AI operating system, swarm intelligence, multi-agent systems, AI research",
+			"inLanguage": "en"
+		}
+		</script>
+		<style>
+			.whitepaper-section {
+				padding: 120px 0 60px;
+				min-height: 100vh;
+				background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+			}
+
+			.whitepaper-header {
+				text-align: center;
+				margin-bottom: 60px;
+			}
+
+			.whitepaper-header h1 {
+				font-family: 'Playfair Display', serif;
+				font-size: 3.5rem;
+				font-weight: 700;
+				color: #ffffff;
+				margin-bottom: 20px;
+				line-height: 1.2;
+			}
+
+			.whitepaper-header p {
+				font-family: 'Inter', sans-serif;
+				font-size: 1.2rem;
+				color: #cccccc;
+				max-width: 600px;
+				margin: 0 auto;
+				line-height: 1.6;
+			}
+
+			.pdf-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 20px;
+				position: relative;
+			}
+
+			.pdf-wrapper {
+				background: #000000;
+				border-radius: 20px;
+				box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+				overflow: hidden;
+				position: relative;
+			}
+
+			.pdf-wrapper::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 4px;
+				z-index: 1;
+			}
+
+			.pdf-embed {
+				width: 100%;
+				height: 80vh;
+				min-height: 600px;
+				border: none;
+				display: block;
+			}
+			
+			@media (max-width: 768px) {
+				.whitepaper-section {
+					padding: 100px 0 40px;
+				}
+
+				.whitepaper-header h1 {
+					font-size: 2.5rem;
+				}
+
+				.whitepaper-header p {
+					font-size: 1rem;
+				}
+
+				.pdf-embed {
+					height: 70vh;
+					min-height: 500px;
+				}
+
+				.pdf-wrapper {
+					border-radius: 15px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+			<nav>
+			<div class="container">
+				<a href="./index.html" class="logo">
+					<img src="images/black.png" alt="Five Labs Logo" />
+				</a>
+				<div class="links">
+					<a href="./work.html">Work</a>
+					<a href="./whitepaper.html">Whitepaper</a>
+					<a href="./contact.html">Contact</a>
+				</div>
+				<button class="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+				<a href="./work.html">Work</a>
+				<a href="./whitepaper.html">Whitepaper</a>
+				<a href="./contact.html">Contact</a>
+			</nav>
+		</nav>
+
+		<section class="whitepaper-section">
+			<div class="container">
+				<div class="whitepaper-header">
+					<h1>Indra OS Whitepaper</h1>
+					<p>
+						Explore our comprehensive research on swarm-based operating systems for AI agents.
+						Discover how Indra OS coordinates multiple AI agents to perform complex tasks.
+					</p>
+				</div>
+
+				<div class="pdf-container">
+					<div class="pdf-wrapper">
+						<embed
+							src="images/IndraOS.pdf"
+							type="application/pdf"
+							class="pdf-embed"
+							title="IndraOS Whitepaper"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<div class="footer-links">
+					<a href="./work.html">Work</a>
+					<a href="./contact.html">Contact</a>
+					<a href="./whitepaper.html">Whitepaper</a>
+					<a href="https://writerbot.cc">Writerbot</a>
+					<a href="https://marketme.cc">MarketMe</a>
+					<a href="https://substack.com/@fivelabs">Blog</a>
+				</div>
+				<div class="copyright">
+					© 2025 Five Labs. All rights reserved.
+				</div>
+			</div>
+		</footer>
+
+		<script src="./js/scripts.js"></script>
+		<script>
+			// Change nav background on scroll (custom for whitepaper.html)
+			window.addEventListener("scroll", () => {
+				const nav = document.querySelector("nav");
+				if (window.scrollY > 10) {
+					nav.style.background = "rgba(0, 0, 0, 0.8)";
+				} else {
+					nav.style.background = "transparent";
+				}
+			});
+		</script>
+	</body>
+</html>

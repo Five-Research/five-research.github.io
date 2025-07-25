@@ -1,0 +1,189 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://fivelabs.co/#organization",
+      "name": "Five Labs",
+      "alternateName": "Five Labs AI Research Lab",
+      "url": "https://fivelabs.co",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://fivelabs.co/#logo",
+        "url": "https://fivelabs.co/images/black.png",
+        "width": 200,
+        "height": 60,
+        "caption": "Five Labs Logo"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://fivelabs.co/#primaryimage",
+        "url": "https://fivelabs.co/images/open-banner.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Five Labs - AI Research Lab"
+      },
+      "description": "Five Labs is a premier AI research and product lab building revolutionary artificial intelligence solutions. We specialize in AI agents, swarm intelligence, and cutting-edge AI products that transform business operations.",
+      "foundingDate": "2023",
+      "founder": {
+        "@type": "Person",
+        "name": "Mehul Srivastava",
+        "jobTitle": "Founder & CEO",
+        "email": "mehul@fivelabs.co"
+      },
+      "industry": "Artificial Intelligence Research",
+      "numberOfEmployees": "2-10",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "contactType": "customer service",
+        "email": "mehul@fivelabs.co",
+        "availableLanguage": ["English"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressRegion": "CA"
+      },
+      "sameAs": [
+        "https://twitter.com/five",
+        "https://www.linkedin.com/company/fivelabs-hq",
+        "https://github.com/fiveresearch"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "AI Agents",
+        "Swarm Intelligence",
+        "Multi-agent Systems",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Deep Learning",
+        "Neural Networks",
+        "AI Research",
+        "AI Products",
+        "Operating Systems",
+        "Software Development",
+        "AI Automation",
+        "Intelligent Systems"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Five Labs AI Products",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "IndraOS",
+              "description": "Revolutionary swarm-based operating system for AI agents with composition, coordination, and monitoring capabilities",
+              "applicationCategory": "Operating System",
+              "operatingSystem": "Cross-platform"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "Writerbot",
+              "description": "Advanced AI writing assistant for content creation and copywriting",
+              "applicationCategory": "Writing Assistant",
+              "operatingSystem": "Web-based"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "MarketMe",
+              "description": "AI-powered marketing strategy generator for businesses",
+              "applicationCategory": "Marketing Tool",
+              "operatingSystem": "Web-based"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "Pathfinder",
+              "description": "AI career accelerator and professional development platform",
+              "applicationCategory": "Career Development",
+              "operatingSystem": "Web-based"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://fivelabs.co/#website",
+      "url": "https://fivelabs.co",
+      "name": "Five Labs",
+      "description": "Premier AI research lab building revolutionary artificial intelligence products and solutions",
+      "publisher": {
+        "@id": "https://fivelabs.co/#organization"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://fivelabs.co/work.html?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fivelabs.co/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fivelabs.co/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Work",
+          "item": "https://fivelabs.co/work.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Whitepaper",
+          "item": "https://fivelabs.co/whitepaper.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact",
+          "item": "https://fivelabs.co/contact.html"
+        }
+      ]
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://fivelabs.co/#indraos-research",
+      "name": "IndraOS Research Project",
+      "description": "Revolutionary research into swarm-based operating systems for AI agents",
+      "url": "https://fivelabs.co/whitepaper.html",
+      "author": {
+        "@id": "https://fivelabs.co/#organization"
+      },
+      "about": [
+        "Artificial Intelligence",
+        "Operating Systems",
+        "Swarm Intelligence",
+        "Multi-agent Systems"
+      ],
+      "keywords": "IndraOS, AI operating system, swarm intelligence, multi-agent systems, AI research",
+      "inLanguage": "en",
+      "datePublished": "2024",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}
