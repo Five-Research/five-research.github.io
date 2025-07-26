@@ -134,6 +134,44 @@
 				border: none;
 				display: block;
 			}
+
+			.mobile-pdf-notice {
+				display: none;
+				background: #1a1a1a;
+				border: 2px solid #333;
+				border-radius: 10px;
+				padding: 30px;
+				text-align: center;
+				margin: 20px 0;
+			}
+
+			.mobile-pdf-notice h3 {
+				color: #ffffff;
+				margin-bottom: 15px;
+				font-size: 1.5rem;
+			}
+
+			.mobile-pdf-notice p {
+				color: #cccccc;
+				margin-bottom: 20px;
+				line-height: 1.6;
+			}
+
+			.mobile-pdf-notice .btn {
+				display: inline-block;
+				padding: 12px 24px;
+				background: #ffffff;
+				color: #000000;
+				text-decoration: none;
+				border-radius: 5px;
+				font-weight: 600;
+				transition: all 0.3s ease;
+			}
+
+			.mobile-pdf-notice .btn:hover {
+				background: #f0f0f0;
+				transform: translateY(-2px);
+			}
 			
 			@media (max-width: 768px) {
 				.whitepaper-section {
@@ -155,6 +193,10 @@
 
 				.pdf-wrapper {
 					border-radius: 15px;
+				}
+
+				.mobile-pdf-notice {
+					display: block;
 				}
 			}
 		</style>
@@ -194,19 +236,24 @@
 				</div>
 
 				<div class="pdf-container">
+					<!-- Mobile PDF Notice -->
+					<div class="mobile-pdf-notice">
+						<h3>📱 Mobile PDF Viewer</h3>
+						<p>For the best reading experience on mobile devices, we recommend downloading the PDF directly to your device.</p>
+						<a href="images/IndraOS.pdf" class="btn" download>Download PDF</a>
+					</div>
+
 					<div class="pdf-wrapper">
-						<object
-							data="images/IndraOS.pdf"
-							type="application/pdf"
-							width="100%"
-							height="100%"
+						<iframe
+							src="images/IndraOS.pdf"
 							class="pdf-embed"
 							title="IndraOS Whitepaper"
+							frameborder="0"
+							allowfullscreen
 						>
-							<p>Your web browser doesn't have a PDF plugin.
-							Instead you can <a href="images/IndraOS.pdf">click here to
-							download the PDF file.</a></p>
-						</object>
+							<p>Your browser doesn't support PDF viewing. 
+							<a href="images/IndraOS.pdf" download>Download the PDF</a> instead.</p>
+						</iframe>
 					</div>
 				</div>
 			</div>
